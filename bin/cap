@@ -1,4 +1,4 @@
-#!/usr/bin/evc bash
+#!/usr/bin/env bash
 
 # Dependencies: scrot zbar-tools xsel
 
