@@ -1,0 +1,12 @@
+#!/usr/bin/evc bash
+
+# Dependencies: scrot zbar-tools xsel
+
+src_img_fn=`mktemp`
+trap "rm $src_img_fn*" EXIT
+
+scrot -s $src_img_fn.png -q 100    
+# increase image quality with option -q from 75 (default) to 100
+
+# does not support newlines!
+zbarimg --raw $src_img_fn.png | tee /dev/tty | head -n 1 | tr -d '\n' | xsel -bi
