@@ -2,3 +2,4 @@
 !3rdparty/Makefile
 src/*.o
 bin/gen
+.vscode/*
