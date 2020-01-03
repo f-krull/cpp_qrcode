@@ -1,0 +1,3 @@
+3rdparty/*
+!3rdparty/Makefile
+src/*.o
